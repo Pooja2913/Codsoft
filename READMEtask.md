@@ -1,0 +1,25 @@
+print("Welcome to the calculator")
+
+num1=input("Enter first number:")
+num2=input("Enter second number:")
+operand=input("Enter + for addition\n""Enter - for substraction\n""Enter * for multiplication\n""Enter / for division\n")
+num1=float(num1)if'.'in num1 else int(num1)
+num2=float(num2)if'.'in num2 else int(num2)
+result=0
+if operand=="+":
+  result=num1+num2
+elif operand=="-":
+  result=num1-num2
+elif operand=="*":
+  result=num1*num2
+elif operand=="/":
+  if num2!=0:
+     result=num1/num2
+  else:
+    print("Cant be divided by zero.")
+else:
+    print("invalid")
+if isinstance(result,float):
+     print(f"Result: {result:.2f}")
+else:
+    print(result)
